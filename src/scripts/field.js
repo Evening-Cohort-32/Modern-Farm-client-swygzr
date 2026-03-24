@@ -7,7 +7,7 @@ const growingPlants = [];
 
 export const addPlant = (seeds) => {
   for (const seed of seeds) {
-    growingPlants += seed;
+    growingPlants.push(seed);
   }
   return growingPlants;
 };
