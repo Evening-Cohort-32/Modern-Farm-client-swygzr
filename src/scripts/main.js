@@ -1,8 +1,8 @@
 //imports
 import { createPlan } from "./plan";
+//import { harvestPlants } from "./harvester.js";
 import { plantSeeds } from "./tractor.js";
 import { Catalog } from "./catalog.js";
-import { usePlants } from "./harvester.js";
 import { createAsparagus } from "./seeds/asparagus.js";
 import { createCorn } from "./seeds/corn.js";
 import { createPotato } from "./seeds/potato.js";
