@@ -1,4 +1,7 @@
 import { createPlan } from "./plan";
+import { plantSeeds } from "./tractor.js";
+import { Catalog } from "./catalog.js";
+import { usePlants } from "./harvester.js";
 
 console.log("Welcome to the main module");
 const yearlyPlan = createPlan();
@@ -8,3 +11,6 @@ console.log("Plan created:", yearlyPlan);
 plantSeeds(yearlyPlan);
 const plantedSeeds = usePlants();
 console.log("Planted seeds:", plantedSeeds);
+
+const allFood = usePlants();
+Catalog(allFood);
