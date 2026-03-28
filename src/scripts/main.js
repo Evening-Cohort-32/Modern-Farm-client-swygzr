@@ -1,5 +1,10 @@
 //imports
 import { createPlan } from "./plan";
+<<<<<<< HEAD
+import { plantSeeds } from "./tractor.js";
+import { Catalog } from "./catalog.js";
+import { usePlants } from "./harvester.js";
+=======
 import { createAsparagus } from "./seeds/asparagus.js";
 import { createCorn } from "./seeds/corn.js";
 import { createPotato } from "./seeds/potato.js";
@@ -27,6 +32,7 @@ const addAsparagus = addPlant(asparagusSeed);
 console.log(addAsparagus);
 const usedPlants = usePlants();
 console.log(usedPlants);
+>>>>>>> develop
 
 console.log("Welcome to the main module");
 const yearlyPlan = createPlan();
@@ -36,3 +42,6 @@ console.log("Plan created:", yearlyPlan);
 plantSeeds(yearlyPlan);
 const plantedSeeds = usePlants();
 console.log("Planted seeds:", plantedSeeds);
+
+const allFood = usePlants();
+Catalog(allFood);
