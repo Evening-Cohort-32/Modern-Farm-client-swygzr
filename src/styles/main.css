@@ -1,36 +1,171 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-
-/*Typography
---------------------------------------------------------------*/
-body,
+/**** OLD CSS ******
+/* body,
 button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
 
 .blue {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
-
+/* 
 .green {
-    background-color: darkseagreen;
+  background-color: darkseagreen;
 }
 
 .purple {
-    background-color: mediumorchid;
+  background-color: mediumorchid;
 }
 
 .red {
-    background-color: darksalmon;
+  background-color: darksalmon;
+} 
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
+.plant {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+/*   text-transform: capitalize;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  gap: 10px;
+}
+.image {
+  width: 50px;
+  height: 50px;
+}
+ /*
+
+
+/********************************
+//******************************* UPDATED "Farm Themed" CSS ************************************
+/* General Layout */
+body {
+  background-color: #f4ece1; /* Light sandy/parchment background */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #3e2723; /* Deep brown text */
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #8d6e63; /* Wooden color */
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: "Patua One", serif;
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 10px 0 0 0;
+  font-style: italic;
+}
+
+/* The Grid for Plants */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Plant Card Styling */
+.plant {
+  background-color: #ffffff;
+  border: 3px solid #8d6e63; /* Wooden fence color */
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px #aed581; /* Grassy green shadow */
+  transition: transform 0.2s;
+}
+
+.plant:hover {
+  transform: translateY(-5px) rotate(1deg);
+  border-color: #4caf50; /* Changes to bright green on hover */
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Farm Stand Table Styling */
+.tableContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff9c4; /* Hay/Straw yellow */
+  border: 2px solid #f9a825;
+}
+
+th {
+  background-color: #5d4037; /* Dark wood */
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  border: 1px solid #ffe082;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #fffde7;
+}
+
+tr:hover {
+  background-color: #c8e6c9; /* Highlight row with pale green */
+}
