@@ -5,11 +5,14 @@ const growingPlants = [];
 
 //In the module, define and export a function named addPlant.The addPlant function must accept a seed object as input. The function will add the seed to the field - COMPLETE
 
-export const addPlant = (seeds) => {
-  for (const seed of seeds) {
+export const addPlant = (seed) => {
+  if (Array.isArray(seed)) {
+    for (const s of seed) {
+      growingPlants.push(s);
+    }
+  } else {
     growingPlants.push(seed);
   }
-  return growingPlants;
 };
 
 //Define and export a function named usePlants that returns a copy of the array of plants. - COMPLETE
