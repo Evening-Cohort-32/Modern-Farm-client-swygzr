@@ -1,2 +1,7 @@
-export const createWheat = () => ({ type: "Wheat", height: 230, output: 6 })
-
+export const createWheat = () => ({
+  type: "Wheat",
+  id: 6,
+  height: 230,
+  output: 6,
+  image: "styles/wheat.jpg",
+});

@@ -1,0 +1,46 @@
+sequenceDiagram
+    participant main
+    participant plan
+    participant tractor
+    participant asparagus
+    participant corn
+    participant field
+    participant harvester
+    participant catalog
+    participant DOM
+
+    main->>plan: createPlan()
+    plan-->>main: yearlyPlan
+
+    main->>tractor: plantSeeds(yearlyPlan)
+
+    loop through plan
+        alt Asparagus
+            tractor->>asparagus: createAsparagus()
+            asparagus-->>tractor: asparagus seed
+            tractor->>field: addPlant(seed)
+        else Corn
+            tractor->>corn: createCorn()
+            corn-->>tractor: corn seeds
+            tractor->>field: addPlant(seed)
+        end
+    end
+
+    main->>field: usePlants()
+    field-->>main: plantedSeeds
+
+    main->>harvester: harvestPlants(plantedSeeds)
+
+    loop through plants
+        alt Corn
+            harvester->>harvester: harvest half output
+        else Other plant
+            harvester->>harvester: harvest full output
+        end
+    end
+
+    harvester-->>main: harvestedFood
+
+    main->>catalog: Catalog(harvestedFood)
+    catalog->>DOM: show plants on page
+    catalog->>DOM: show quantity table
